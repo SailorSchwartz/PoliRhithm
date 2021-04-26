@@ -2,14 +2,6 @@ import pygame, math, sys, random, os, time
 from colors import *
 
 
-class Quad(pygame.sprite.Sprite):
-    def __init__(self,color,x,y,width,height):
-        pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.Surface((width,height))
-        self.image.fill(color)
-        self.rect = self.image.get_rect()
-        self.rect.x = x
-        self.rect.y = y
 
 
 class SArrow(pygame.sprite.Sprite):
@@ -124,3 +116,41 @@ enemySList = pygame.sprite.Group()
 enemyDList = pygame.sprite.Group()
 enemyFList = pygame.sprite.Group()
 enemyGList = pygame.sprite.Group()
+
+class Quad(pygame.sprite.Sprite):
+    def __init__(self,color,x,y,width,height):
+        pygame.sprite.Sprite.__init__(self)
+        self.image = pygame.Surface((width,height))
+        self.image.fill(color)
+        self.rect = self.image.get_rect()
+        self.rect.x = x
+        self.rect.y = y
+
+
+class Text(pygame.sprite.Sprite):
+    def __init__(self,color,x,y,font,text):
+        pygame.sprite.Sprite.__init__(self)
+        self.image = font.render(text, True, color)
+        self.rect = self.image.get_rect()
+        self.rect.x = x
+        self.rect.y = y
+        
+class Image(pygame.sprite.Sprite):
+    def __init__(self,picture,x,y):
+        pygame.sprite.Sprite.__init__(self)
+        self.image = pygame.image.load(picture)
+        self.rect = self.image.get_rect()
+        self.rect.x = x
+        self.rect.y = y
+
+class Button(pygame.sprite.Sprite):
+    def __init__(self,x,y,sprite):
+        pygame.sprite.Sprite.__init__(self)
+        self.image = pygame.image.load(sprite)
+        self.rect = self.image.get_rect()
+        self.rect.x = x
+        self.rect.y = y
+
+
+
+

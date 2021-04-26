@@ -1,0 +1,15 @@
+{
+  "Packs" : [
+	{
+		"name" : "Boa - Twilight",
+		"maxScore" : "30000",
+		"difficulty" : "*****",
+		"creator" : "Sailor_Schwartz",
+		"bgColor": "(47,120,173)",
+		"textColor" : "(255,255,255)",
+		"textBhColor" : "(0,0,0)",
+		"topColor" : "(116,31,36)",
+		"outlineColor" : "(255,255,255)"
+	}
+  ]
+}

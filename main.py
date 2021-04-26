@@ -1,5 +1,6 @@
 import pygame, math, sys, random, os, time
 from colors import *
+from gameClasses import *
 
 displayWidth = 1280
 displayHeight = 720
@@ -10,22 +11,7 @@ speedy = 0
 
 clock = pygame.time.Clock()
 
-class Quad(pygame.sprite.Sprite):
-    def __init__(self,color,x,y,width,height):
-        pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.Surface((width,height))
-        self.image.fill(color)
-        self.rect = self.image.get_rect()
-        self.rect.x = x
-        self.rect.y = y
 
-class Button(pygame.sprite.Sprite):
-    def __init__(self,x,y,sprite):
-        pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.image.load(sprite)
-        self.rect = self.image.get_rect()
-        self.rect.x = x
-        self.rect.y = y
       
 class Cursor(pygame.sprite.Sprite):
     def __init__(self,x,y):
@@ -69,7 +55,7 @@ passwords = ["bob","password","gamer","gamer"]
 
 def startGameButtonClicked(x,y,x2,y2):
     if x == x2 and y == y2:
-        exec(open('game.py').read())
+        exec(open('levelSelect.py').read())
 def loginGameButtonClicked(x,y,x2,y2):
     if x == x2 and y == y2:
         print("login clicked")
